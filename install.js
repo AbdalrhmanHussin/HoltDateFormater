@@ -1,7 +1,7 @@
 
 export default {
     install : function(app,option) {
-        app.directive('HoltFormater',(el,binding,vnode) => {
+        app.directive('HoltFormater',(el,binding) => {
             let monthShortArr  = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
             let monthLongArr   = ['January','Feberuary','March','April','May','June','July','Augest','September','Octuber','November','December'];
             let daysLongtArr   = ['Saterday','Sunday','Monday','Tuesday','Wensday','Thursday','Friday'];
@@ -22,12 +22,12 @@ export default {
             let month  = now.getMonth();
             let year   = now.getFullYear();
             let day    = now.getDate();
-            let hour   = now.getHours();
-            let min    = now.getMinutes();
-            let sec    = now.getSeconds();
+            // let hour   = now.getHours();
+            // let min    = now.getMinutes();
+            // let sec    = now.getSeconds();
             
             //Check if the day in the provided date is in past or future
-            let isPast =  (now,date) => {
+            let isPast =  (now) => {
                 return (now > providerDate)  ? true : false;
             }
 
@@ -45,7 +45,6 @@ export default {
                 let countYears  = countMonths/ 12;
                 let leftMonth   = Math.round((Math.round(parseFloat(countYears).toFixed(1) * 100)/100)%1 * 10);
                 let leftDay     = Math.round((Math.round(parseFloat(countMonths).toFixed(1) * 100)/100)%1 * 10);
-                let date;
                 if(diffDays < 30)
                 {
                     return abs(diffDays);
@@ -104,7 +103,7 @@ export default {
                 str = str.replace('yy',pYear);
                 str = str.replace('tt',pYear);
                 str = str.replace('hh',pHour);
-                str = str.replace('ii',pHour);
+                str = str.replace('ii',pMin);
                 str = str.replace('zz',pSec);
 
                 el.innerText = str;
