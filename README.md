@@ -22,7 +22,7 @@ let holtOptions = {
     formate: true
 }
 
-app.use(HoltDateFormater,{options})
+app.use(HoltDateFormater,{holtOptions})
 
  ``` 
  
