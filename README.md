@@ -10,7 +10,7 @@ Core Features
 
 ### first you need to install the plugin 
 ```
-npm i holtdataformate
+npm i holtdataformater
 ```
 ```
 import HoltDateFormater from 'holtdataformater';
