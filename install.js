@@ -1,5 +1,5 @@
-
 export default {
+    name: 'Holt',
     install : function(app,option) {
         app.directive('HoltFormater',(el,binding) => {
             let monthShortArr  = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -51,18 +51,17 @@ export default {
                 } else if (Math.floor(countMonths) < 12) 
                 {
                     let months = abs(Math.floor(countMonths)) + ' Month';  
-                    let dayLeft = ((option['options'].percies && leftDay) ? abs(leftDay)  + ' days': '');
+                    let dayLeft = ((option.percies && leftDay) ? abs(leftDay)  + ' days': '');
                     return months + ' ' +dayLeft;
                 } else if (Math.floor(countYears) !== 0) 
                 {
                     console.log('here')
                     let years = abs(Math.floor(countYears)) + ' Year';
-                    let monthLeft = ((option['options'].percies && leftMonth) ? abs(leftMonth)  + ' Month': '');
+                    let monthLeft = ((option.percies && leftMonth) ? abs(leftMonth)  + ' Month': '');
                     return years + ' ' + monthLeft;
                 }
             }
-
-            if(option['options'].shortTrack)
+            if(option.shortTrack)
             {
 
                 if(day == pDay && month == pMonth && year == pYear)
@@ -79,14 +78,14 @@ export default {
                 
             }
 
-            if(option['options'].longTrack)
+            if(option.longTrack)
             {
                 let ago = (isPast(now,providerDate)) ? ' ago' : '';
                 el.innerText = dateDiff(now,providerDate) + ago ;
                 return false;  
             }
 
-            if(option['options'].formate)
+            if(option.formate)
             {
                 let str = binding.arg;
 
@@ -112,3 +111,4 @@ export default {
            });
     }
 }
+
