@@ -13,7 +13,7 @@ Core Features
 npm i holtdataformate
 ```
 ```
-import HoltDateFormate from 'holtdataformate';
+import HoltDateFormater from 'holtdataformater';
 
 let holtOptions = {
     shortTrack: true,
