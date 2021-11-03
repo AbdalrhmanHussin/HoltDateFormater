@@ -2,6 +2,10 @@
 
 ## Holt is vue-plugin used to simplify formatting the provided date into  the format that you want in easy way 
 
+# Npm website
+
+https://www.npmjs.com/package/holtdataformater
+
 Core Features
 - Get time passed since a certain date in a define formate 
 - Get days,month,years that passed since a certain date in a define formate 
