@@ -12,7 +12,7 @@ Core Features
 - Check if that date is yesterday or tommorrow or today
 
 
-### first you need to install the plugin 
+### INSTALLATION
 ```
 npm i holtdataformater
 ```
