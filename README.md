@@ -2,6 +2,8 @@
 
 ## Holt is vue-plugin used to simplify formatting the provided date into  the format that you want in easy way 
 
+## Note This package support only Vue 3
+
 # Npm website
 
 https://www.npmjs.com/package/holtdataformater
